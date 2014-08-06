@@ -9,7 +9,7 @@ angular.module('needle.user', [])
 	];
 
 	$scope.showModal = function showModal() {
-		modalFactory.activate;
+		modalFactory.activate();
 	};
 
 	$scope.addUser = function addUser() {
