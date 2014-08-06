@@ -6,15 +6,13 @@
 		<link rel='stylesheet' href='' type='text/css' />
 	</head>
 
-	<body ng-controller='UserCtrl'>
+	<body>
 
-		<div ng-repeat="user in users">
-			{{ user.name }}
-			{{ user.email }}
-		</div>
+		<div ng-view></div>
 
 		<!-- js includes -->
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.min.js"></script>
 		<script src='js/app.js'></script>
 		<script src='js/user/user.js'></script>
 	</body>

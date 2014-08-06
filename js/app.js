@@ -5,7 +5,7 @@ angular.module('needle', [
 
 .config(function($routeProvider, $locationProvider) {
 	$routeProvider
-		.when('/' {
+		.when('/', {
 			templateUrl: 'user/index.html',
 			controller: 'UserCtrl'
 		});
