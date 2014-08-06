@@ -6,12 +6,16 @@
 		<link rel='stylesheet' href='' type='text/css' />
 	</head>
 
-	<body>
+	<body ng-controller='UserCtrl'>
+
+		<div ng-repeat="user in users">
+			{{ user.name }}
+			{{ user.email }}
+		</div>
 
 		<!-- js includes -->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
 		<script src='js/app.js'></script>
-		<script src=''></script>
-		<script src=''></script>
+		<script src='js/user/user.js'></script>
 	</body>
 </html>
