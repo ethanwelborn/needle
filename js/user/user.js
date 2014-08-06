@@ -9,6 +9,6 @@ angular.module('needle.user', [])
 	];
 }])
 
-.factory('userService', function() {
+.service('userService', function() {
 
 });

@@ -1,1 +1,15 @@
-hello
+<table id='user-table'>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Date Added</th>
+	</tr>
+	<tr ng-repeat="user in users">
+		<td>
+			{{ user.name }}
+		</td>
+		<td>
+			{{ user.email }}
+		</td>
+	</tr>
+</table>
