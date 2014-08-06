@@ -32,6 +32,8 @@ angular.module('needle.user', [])
 	};
 
 	this.storeUser = function storeUser(user) {
+		date = new Date();
+		user.date = date.getTime();
 		users.push(user);
 		notifyObservers();
 	};

@@ -2,7 +2,7 @@
 	<tr>
 		<th>Name</th>
 		<th>Email</th>
-		<th>Date Added</th>
+		<th>Date/Time Added</th>
 	</tr>
 
 	<tr ng-repeat="user in users">
@@ -11,6 +11,9 @@
 		</td>
 		<td>
 			{{ user.email }}
+		</td>
+		<td>
+			<span>{{ user.date | date:'MM/dd/yyyy hh:mm:ss' }}</span>
 		</td>
 	</tr>
 
