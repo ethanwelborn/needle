@@ -9,6 +9,7 @@ angular.module('needle.modal', ['btford.modal'])
 
 	$scope.addUser = function addUser() {
 		userService.storeUser($scope.user);
+		$scope.user = {}; // Reset the user to empty
 	};
 }])
 
