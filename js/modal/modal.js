@@ -1,12 +1,15 @@
 angular.module('needle.modal', ['btford.modal'])
 
-.controller('ModalCtrl', ['$scope', 'modalFactory', function($scope, modalFactory) {
+.controller('ModalCtrl', ['$scope', 'userService', 'modalFactory', function($scope, userService, modalFactory) {
+	$scope.user = {};
+
 	$scope.hideModal = function hideModal() {
 		modalFactory.deactivate();
 	};
 
 	$scope.addUser = function addUser() {
-		console.log('magoo');
+		console.log($scope.user);
+		userService.storeUser($scope.user);
 	};
 }])
 

@@ -20,4 +20,8 @@ angular.module('needle.user', [])
 	this.storeUser = function storeUser(user) {
 		this.users.push(user);
 	};
+
+	this.getUsers = function getUsers() {
+		return this.users;
+	};
 });
