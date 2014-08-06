@@ -7,6 +7,10 @@ angular.module('needle.user', [])
 			email: 'guy@place.com'
 		}
 	];
+
+	$scope.addUser = function addUser() {
+		console.log('hello');
+	};
 }])
 
 .service('userService', function() {
