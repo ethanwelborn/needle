@@ -1,6 +1,6 @@
 angular.module('needle.user', [])
 
-.controller('UserCtrl', ['$scope', 'userService', 'modalFactory', function($scope, userService, modalFactory) {
+.controller('UserCtrl', ['$scope', 'modalFactory', function($scope, modalFactory) {
 	$scope.users = [
 		{
 			name: 'Guy',
@@ -15,5 +15,9 @@ angular.module('needle.user', [])
 }])
 
 .service('userService', function() {
+	this.users = [];
 
+	this.storeUser = function storeUser(user) {
+		this.users.push(user);
+	};
 });
