@@ -1,8 +1,12 @@
 angular.module('needle.modal', ['btford.modal'])
 
-.controller('ModalCtrl', ['$scope', 'btfModal', function($scope, btfModal) {
+.controller('ModalCtrl', ['$scope', 'modalFactory', function($scope, modalFactory) {
 	$scope.hideModal = function hideModal() {
+		modalFactory.deactivate();
+	};
 
+	$scope.addUser = function addUser() {
+		console.log('magoo');
 	};
 }])
 

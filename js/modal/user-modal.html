@@ -1,4 +1,7 @@
 <div class="btf-modal">
   <h3>Hello {{name}}</h3>
-  <p><a href ng-click="modal.closeMe()">Close Me</a></p>
+  <p><a href ng-click="hideModal()">Close Me</a></p>
+  <input type='text' ng-model="user.name" placeholder="Your name" />
+  <input type='text' ng-modal="user.email" placeholder="Your email" />
+  <input type='submit' value="Add user" ng-click="addUser()" />
 </div>

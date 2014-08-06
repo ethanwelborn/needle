@@ -12,9 +12,6 @@ angular.module('needle.user', [])
 		modalFactory.activate();
 	};
 
-	$scope.addUser = function addUser() {
-		console.log('hello');
-	};
 }])
 
 .service('userService', function() {
