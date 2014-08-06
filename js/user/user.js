@@ -14,7 +14,9 @@ angular.module('needle.user', [])
 	var observerCallbacks = [];
 
 	var notifyObservers = function notifyObservers() {
-		
+		angular.forEach(observerCallbacks, function(callback) {
+			callback();
+		});
 	};
 
 	this.registerObserver = function registerObserver(callback) {
