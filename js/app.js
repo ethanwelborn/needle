@@ -1,6 +1,7 @@
 angular.module('needle', [
 	'ngRoute',
-	'needle.user'
+	'needle.user',
+	'needle.modal'
 ])
 
 .config(function($routeProvider, $locationProvider) {
