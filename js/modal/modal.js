@@ -8,7 +8,6 @@ angular.module('needle.modal', ['btford.modal'])
 	};
 
 	$scope.addUser = function addUser() {
-		console.log($scope.user);
 		userService.storeUser($scope.user);
 	};
 }])

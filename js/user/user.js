@@ -1,12 +1,7 @@
 angular.module('needle.user', [])
 
 .controller('UserCtrl', ['$scope', 'modalFactory', function($scope, modalFactory) {
-	$scope.users = [
-		{
-			name: 'Guy',
-			email: 'guy@place.com'
-		}
-	];
+	$scope.users = [];
 
 	$scope.showModal = function showModal() {
 		modalFactory.activate();
@@ -15,7 +10,16 @@ angular.module('needle.user', [])
 }])
 
 .service('userService', function() {
-	this.users = [];
+	var users = [];
+	var observerCallbacks = [];
+
+	var notifyObservers = function notifyObservers() {
+		
+	};
+
+	this.registerObserver = function registerObserver(callback) {
+		observerCallbacks.push(callback);
+	};
 
 	this.storeUser = function storeUser(user) {
 		this.users.push(user);
