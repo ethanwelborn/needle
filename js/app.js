@@ -1,4 +1,3 @@
-'use strict'
-
-angular.module 'needle', [
-]
+angular.module('needle', [
+	'needle.user'
+]);
