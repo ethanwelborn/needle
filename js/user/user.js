@@ -5,7 +5,7 @@ angular.module('needle.user', [])
 
 	// Callback for user service observer
 	var getUsers = function getUsers() {
-		$scope.users = userService.getUsers()
+		$scope.users = userService.getUsers();
 	};
 
 	// Register self as observer on user service
@@ -37,6 +37,6 @@ angular.module('needle.user', [])
 	};
 
 	this.getUsers = function getUsers() {
-		return this.users;
+		return users;
 	};
 });
