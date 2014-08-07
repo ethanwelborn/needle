@@ -17,6 +17,6 @@ angular.module('needle.modal', ['btford.modal'])
 	return btfModal({
 		controller: 'ModalCtrl',
 		controllerAs: 'modal',
-		templateUrl: '/js/modal/user-modal.html'
+		templateUrl: '/app/modal/user-modal.html'
 	});
 }]);
