@@ -1,6 +1,20 @@
 .modal-shade {
+	position: fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
 	background-color:#000;
 	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 	filter: alpha(opacity=50);
 	opacity:.5;
+}
+.btf-modal {
+	background-color:#fff;
+	padding:20px;
+}
+#close-modal {
+	position: absolute;
+	top:20px;
+	right:20px;
 }

@@ -1,7 +1,7 @@
 <div class='modal-shade'></div>
 <div class="btf-modal">
   <h3>Hello {{name}}</h3>
-  <p><a href ng-click="hideModal()">Close Me</a></p>
+  <a href id='close-modal' ng-click="hideModal()">&#x2715;</a>
   <input type='text' ng-model="user.name" placeholder="Your name" />
   <input type='text' ng-model="user.email" placeholder="Your email" />
   <input type='submit' value="Add user" ng-click="addUser()" />
