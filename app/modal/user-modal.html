@@ -4,14 +4,14 @@
   <a href id='close-modal' ng-click="hideModal()">&#x2715;</a>
 
   <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
-	  <div class='control'>
+	  <div class='control' ng-class="{ 'has-error' : userForm.name.$invalid && form.submitted }">
 	  	<label>Name</label>
 	  	<input class="text-field" name="name" type='text' ng-model="user.name" ng-minlength="3" placeholder="Your name" required />
 	  	<p ng-show="userForm.name.$error.required && form.submitted" class='error'>Please provide a name</p>
 	  	<p ng-show="userForm.name.$error.minlength && form.submitted" class='error'>There must be at least 3 characters in the name</p>
 	  </div>
 
-	  <div class='control'>
+	  <div class='control' ng-class="{ 'has-error' : userForm.email.$invalid && form.submitted }">
 	  	<label>Email</label>
 	  	<input class="text-field" name="email" type='email' ng-model="user.email" placeholder="Your email" required />
 	  	<p ng-show="userForm.email.$invalid && form.submitted" class='error'>Please use a valid email</p>

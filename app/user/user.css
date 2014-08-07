@@ -1,0 +1,12 @@
+#user-table {
+	width:100%;
+}
+
+#user-table th {
+	background:#ccc;
+	padding:10px;
+}
+
+#user-table tr:nth-child(odd) {
+	background-color:#f2f2f2;
+}

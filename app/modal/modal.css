@@ -28,3 +28,6 @@
 .error {
 	color:#c51f1f;
 }
+.has-error input {
+	border:solid 1px #c51f1f;
+}
