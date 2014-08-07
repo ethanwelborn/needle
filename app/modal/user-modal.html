@@ -1,8 +1,22 @@
 <div class='modal-shade'></div>
 <div class="btf-modal">
-  <h3>Hello {{name}}</h3>
+  <h3>Please add some user information</h3>
   <a href id='close-modal' ng-click="hideModal()">&#x2715;</a>
-  <input type='text' ng-model="user.name" placeholder="Your name" />
-  <input type='text' ng-model="user.email" placeholder="Your email" />
-  <input type='submit' value="Add user" ng-click="addUser()" />
+
+  <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+	  <div class='control'>
+	  	<label>Name</label>
+	  	<input class="text-field" name="name" type='text' ng-model="user.name" ng-minlength="3" placeholder="Your name" required />
+	  	<p ng-show="userForm.name.$error.required && form.submitted" class='error'>Please provide a name</p>
+	  	<p ng-show="userForm.name.$error.minlength && form.submitted" class='error'>There must be at least 3 characters in the name</p>
+	  </div>
+
+	  <div class='control'>
+	  	<label>Email</label>
+	  	<input class="text-field" name="email" type='email' ng-model="user.email" placeholder="Your email" required />
+	  	<p ng-show="userForm.email.$invalid && form.submitted" class='error'>Please use a valid email</p>
+	  </div>
+
+	  <input type='submit' value="Add user" />
+	</form>
 </div>

@@ -13,8 +13,18 @@
 	background-color:#fff;
 	padding:20px;
 }
+.control {
+	display: block;
+	margin:10px 0;
+}
+.text-field {
+	width:270px;
+}
 #close-modal {
 	position: absolute;
 	top:20px;
 	right:20px;
+}
+.error {
+	color:#c51f1f;
 }
